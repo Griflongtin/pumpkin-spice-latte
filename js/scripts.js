@@ -1,21 +1,23 @@
 function translator(number) {
+debugger
   var numberArray = [];
   for (var i = 1; i <= number; i++) {
     if (i % 3 === 0) {
-      numberArray.push(" " + "I'm sorry, Dave. I'm afraid I can't do that.")
+      numberArray.push(" " + "I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
-      numberArray.push(" " + i);
+      numberArray.push(i);
     }
+  }
+  var beepNumber = numberArray.toString().replace(/1/g, "Beep!");
 
-    }
-    return numberArray
+
+  return beepNumber
 }
 
 
 
-
 $(function() {
-  $("form").click(function(event) {
+  $("button").click(function(event) {
     event.preventDefault();
     $("#output").text(translator(parseInt($("#userinput").val())));
   });
