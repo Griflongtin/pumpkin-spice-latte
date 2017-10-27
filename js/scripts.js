@@ -1,5 +1,4 @@
 function translator(number) {
-debugger
   var numberArray = [];
   for (var i = 1; i <= number; i++) {
     if (i % 3 === 0) {
@@ -14,8 +13,6 @@ debugger
 
   return outputNumber
 }
-
-
 
 $(function() {
   $("button").click(function(event) {

@@ -1,6 +1,6 @@
 # _Beep! Boop!_
 #### _October 27, 2017_
-#### _By_**Griffin P Longtin**
+#### _By_ **Griffin P Longtin**
 
 ## Description
 
