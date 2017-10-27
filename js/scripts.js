@@ -5,13 +5,13 @@ debugger
     if (i % 3 === 0) {
       numberArray.push(" " + "I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
-      numberArray.push(i);
+      numberArray.push(" " + i);
     }
   }
-  var beepNumber = numberArray.toString().replace(/1/g, "Beep!");
+  var beepNumber = numberArray.toString().replace(/1/g, " " + "Beep!");
+  var boopNumber = beepNumber.replace(/0/g, " " + "Boop!");
 
-
-  return beepNumber
+  return boopNumber
 }
 
 
