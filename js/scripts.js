@@ -3,15 +3,16 @@ debugger
   var numberArray = [];
   for (var i = 1; i <= number; i++) {
     if (i % 3 === 0) {
-      numberArray.push(" " + "I'm sorry, Dave. I'm afraid I can't do that.");
+      numberArray.push("<li>" + "I'm sorry <span>Dave</span>. I'm afraid I can't do that." + " </li> ");
     } else {
-      numberArray.push(" " + i);
+      numberArray.push("<li> " + i + "</li>");
     }
   }
-  var beepNumber = numberArray.toString().replace(/1/g, " " + "Beep!");
-  var boopNumber = beepNumber.replace(/0/g, " " + "Boop!");
+  var beepNumber = numberArray.toString().replace(/1/g, "Beep!");
+  var boopNumber = beepNumber.replace(/0/g, "Boop!");
+  var outputNumber = boopNumber.replace(/,/g, "");
 
-  return boopNumber
+  return outputNumber
 }
 
 
@@ -19,6 +20,7 @@ debugger
 $(function() {
   $("button").click(function(event) {
     event.preventDefault();
-    $("#output").text(translator(parseInt($("#userinput").val())));
+    $('#output').empty();
+    $("#output").append(translator(parseInt($("#userinput").val())));
   });
 });
